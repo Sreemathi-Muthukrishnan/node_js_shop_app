@@ -1,0 +1,11 @@
+{
+  "name": "node_js_shop_app",
+  "version": "1.0.0",
+  "description": "Create shop app using node js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sree",
+  "license": "ISC"
+}
