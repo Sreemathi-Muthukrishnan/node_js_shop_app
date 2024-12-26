@@ -12,4 +12,20 @@ html(lang="en")
                     li.main-header__item
                         a.active(href="/") Shop
                     li.main-header__item
-                        a(href="/admin/add-product") Add Product  
+                        a(href="/admin/add-product") Add Product
+        main 
+            if prods.length > 0
+               .grid 
+                    each product in prods 
+                        article.card.product-item 
+                            header.card__header
+                                h1.product__title #{product.title}
+                            div.card__image 
+                                img(src="https://tse4.mm.bing.net/th?id=OIP.gU6tMd-36P3Bk4CMq3idFQHaEV&pid=Api&P=0&h=180" alt="book")
+                            div.card__content
+                                h1.product__price $19.99
+                                p.product__description A very good book 
+                            .card__actions 
+                                button.btn Add to cart
+            else 
+                h1 No products!
