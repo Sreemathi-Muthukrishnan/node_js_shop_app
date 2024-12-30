@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add Product</title>
+    <title>{{ pageTitle }}</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
@@ -20,9 +20,11 @@
   </body>
   <main>
     <div class="grid">
+        {{#if hasProducts }}
+            {{#each prods}}
             <article class="card product-item">
                 <header class="card__header">
-                    <h1 class="product__title">Great Book</h1>
+                    <h1 class="product__title">{{this.title}}</h1>
                 </header>
                 <div class="card__image">
                     <img src="https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png" alt="A Book">
@@ -35,6 +37,10 @@
                     <button class="btn">Add to Cart</button>
                 </div>
             </article>
+            {{/each}}
+            {{else}}
+                <h1>No Products found!</h1>
+        {{/if}}
         </div>
   </main>
 </html>
