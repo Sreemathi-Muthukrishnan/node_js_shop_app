@@ -7,7 +7,13 @@ const router = express.Router();
 
 router.get("/", (req, res, next) => {
   //res.sendFile(path.join(rootDir, 'views', 'shop.html'));
-  res.render("shop", { prods: adminData.products,  pageTitle: 'Shop', path: '/', hasProducts: adminData.products.length > 0 });
+  res.render("shop", {
+    prods: adminData.products,
+    pageTitle: "Shop",
+    path: "/",
+    hasProducts: adminData.products.length > 0,
+    activeShop: true,
+  });
 });
 
 module.exports = router;
